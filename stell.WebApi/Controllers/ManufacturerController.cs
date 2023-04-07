@@ -11,7 +11,7 @@ namespace stall.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ManudacturerController : ControllerBase
+    public class ManufacturerController : ControllerBase
     {
         private readonly IMapper _mapper;
 
@@ -20,7 +20,7 @@ namespace stall.WebApi.Controllers
             _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
 
 
-        public ManudacturerController(IMapper mapper) => _mapper = mapper;
+        public ManufacturerController(IMapper mapper) => _mapper = mapper;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
