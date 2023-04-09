@@ -1,22 +1,15 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using stall.Application.stalls.Commands.Create.customer;
-using stall.Application.stalls.Commands.Create.seller;
-using stall.Application.stalls.Commands.Delete.customer;
-using stall.Application.stalls.Commands.Delete.seller;
-using stall.Application.stalls.Commands.Update.customer;
-using stall.Application.stalls.Commands.Update.seller;
-using stall.Application.stalls.Queries.GetCategorys;
-using stall.Application.stalls.Queries.GetOrders;
-using stall.WebApi.Models;
+using OrderService.core.Queries;
 
-namespace stall.WebApi.Controllers
+namespace OrderService
 {
     [ApiController]
     [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
+
         private readonly IMapper _mapper;
 
         private IMediator _mediator;
@@ -69,6 +62,7 @@ namespace stall.WebApi.Controllers
             await Mediator.Send(command).ConfigureAwait(false);
             return NoContent();
         }
+
     }
 }
 

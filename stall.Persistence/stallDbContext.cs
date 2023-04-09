@@ -43,25 +43,7 @@ public class stallDbContext : DbContext, IstallDbContext
     {
         return Set<T>();
     }
-/*    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        builder.ApplyConfiguration(new CategoryConfiguration());
-        builder.ApplyConfiguration(new ManufacturerConfiguration());
-        builder.ApplyConfiguration(new ProductConfiguration());
-        builder.ApplyConfiguration(new StorehouseConfiguration());
 
-        builder.ApplyConfiguration(new Customer_TableConfiguration());
-        builder.ApplyConfiguration(new Order_PickingConfiguration());
-        builder.ApplyConfiguration(new OrderConfiguration());
-        builder.ApplyConfiguration(new StatusConfiguration());
-
-        builder.ApplyConfiguration(new Courier_TableConfiguration());
-        builder.ApplyConfiguration(new DeliveryConfiguration());
-
-        builder.ApplyConfiguration(new Reg_UserConfiguration());
-        builder.ApplyConfiguration(new RoleConfiguration());
-        base.OnModelCreating(builder);
-    }*/
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfiguration(new CategoryConfiguration());

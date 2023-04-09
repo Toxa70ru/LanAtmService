@@ -1,0 +1,16 @@
+﻿using MediatR;
+using System;
+
+
+namespace OrderService.core.Queries
+{
+    public class CreateOrder : IRequest
+    {
+        public int Order_id { get; set; }
+        public string Customer_name { get; set; }
+        public string Full_name { get; set; }
+        public string Adres { get; set; }
+        public int Sum { get; set; }
+        public int Status_id { get; set; }
+    }
+}
